@@ -233,13 +233,20 @@ public with sharing class ClassesObjectsMethods {
     public static String getDayOfWeek(DateTime dt) {
         // Define a map of day of the week as a key and day number as the value
         // Monday = 1, Tuesday = 2, etc.
-
+        Map<String,Integer> weekMap = new Map<String,Integer> ();
+        weekMap.put('Monday', 1);
+        weekMap.put('Tuesday', 2);
+        weekMap.put('Wednesday', 3);
+        weekMap.put('Thursday', 4);
+        weekMap.put('Friday', 5);
+        weekMap.put('Saturday', 6);
+        weekMap.put('Sunday', 7);
         // Get the day name using .format('EEEE');
-
+        String dayName = dt.format('EEEE');
         // Get the day number from the map using the day name
-
+        Integer dayNumber = weekMap.get(dayName);
         // Return the result as a string
-        return null; // Replace null with the variable you used to store the result
+        return String.valueOf(dayNumber);
     }
 
 
