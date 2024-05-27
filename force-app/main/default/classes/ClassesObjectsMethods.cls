@@ -197,9 +197,11 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer generateRandomNumber() {
         // Use Math class to generate number between 50 and 100
-
+        Double randomDouble = Math.random();
+        //Scale random double for range between 50-100 
+        Integer randomNumber = (Integer)(randomDouble * 51) + 50; 
         // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+        return randomNumber;
     }
 
     /**
