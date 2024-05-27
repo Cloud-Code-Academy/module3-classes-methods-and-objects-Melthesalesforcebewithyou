@@ -200,7 +200,7 @@ public with sharing class ClassesObjectsMethods {
         Double randomDouble = Math.random();
         //Scale random double for range between 50-100 
         Integer randomNumber = (Integer)(randomDouble * 51) + 50; 
-        // Return the random integer
+        // Return the random integer variable 
         return randomNumber;
     }
 
