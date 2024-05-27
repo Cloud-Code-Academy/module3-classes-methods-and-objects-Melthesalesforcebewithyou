@@ -211,12 +211,17 @@ public with sharing class ClassesObjectsMethods {
      * @return The current date in the current user locale format.
      */
     public static String getCurrentDate() {
-        // Get the todays date
-
-        // Format the current date
-
-        // Return the result
-        return null; // Replace null with the variable you used to store the result
+        // Get the today's date
+        Date todaysDate = Date.today();
+        
+        // Get the user's locale
+        String userLocale = UserInfo.getLocale();
+        
+        // Format the current date based on the style and locale
+        String dateFormat = todaysDate.format();
+        
+        // Return the formatted date
+        return dateFormat;
     }
 
     /**
