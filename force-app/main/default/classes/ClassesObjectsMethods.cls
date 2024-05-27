@@ -278,25 +278,28 @@ public with sharing class ClassesObjectsMethods {
      * Each Book object has a title and an author, and methods to return these details.
      * This class can be used in the context of a library management system, bookstore, etc.
      * where you need to manipulate and manage book information.
-     */
+     */ 
     public class Book {
         // Declare three public instance variables - title, author, pages
         // title
+        public String title;
         // author
+        public String author;
         // pages
+        public Integer pages;
     
-        // Book constructor to initialize the title and author
-        public Book() {
-            // Initialize the title and author
+        // Constructor with parameters to initialize the title and author
+        public Book(String title, String author) {
+            this.title = title;
+            this.author = author;
         }
     
         // Method that returns the details of the book
         public String getBookDetails() {
-            // return A string containing the details of the book in the format "Title: <title>, Author: <author>"
-            return null; // Replace null with the variable you used to store the result
+            // Return a string containing the details of the book in the format "Title: <title>, Author: <author>"
+            return 'Title: ' + this.title + ', Author: ' + this.author;
         }
     }
-    
 
     /**
      * Question 12
@@ -306,11 +309,11 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String createAndGetBookDetails() {
         // Create a Book object with title "A Brief History of Time" and author "Stephen Hawking"
-
+        Book hawkingBook = new Book ('A Brief History of Time', 'Stephen Hawking');
         // Call the getBookDetails method on the book object to get the details of the book
-
+        String details = hawkingBook.getBookDetails();
         // Return the details of the book
-        return null; // Replace null with the variable you used to store the result
+        return details; // Replace null with the variable you used to store the result
     }
 
     /**
