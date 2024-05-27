@@ -90,15 +90,20 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String removeDuplicateWords(String sentence) {
         // Split the sentence into words
-
+        // Add the '\\s' parameter for whitespace characters 
+        List <String> sentenceWords = sentence.split('\\s');
         // Create a set to store the unique words
-
+        Set <String> uniqueWords = new Set <String>();
         // Add each word to the set
-
+        for (String word : sentenceWords){
+            uniqueWords.add(word);
+        }
+        //Convert set back into a List 
+        List<String> uniqueWordsList = new List <String> (uniqueWords);
         // Join the unique words back into a sentence
-
+        String result = String.join(uniqueWordsList, ' ');
         // Return the sentence with unique words
-        return null; // Replace null with the variable you used to store the result
+        return result;
     }
 
     /**
